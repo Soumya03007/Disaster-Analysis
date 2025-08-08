@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# 🛑 Disaster Analysis Web App
 
-## Project info
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?logo=tailwind-css)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-**URL**: https://lovable.dev/projects/ce4ad540-dca4-4245-a2ff-c47c858f970f
+An AI-powered web application that analyzes disaster-related images to generate detailed captions and structured reports.  
+The backend uses **FastAPI** + **HuggingFace Transformers** for vision-language tasks, while the frontend is built with **React (TypeScript)** + **Vite** + **TailwindCSS** + **shadcn/ui** for a modern, responsive interface.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📸 Overview
+This tool allows you to:
+- Upload an image from a disaster scene.
+- Automatically generate a descriptive caption using a vision transformer model.
+- Generate a detailed disaster report describing:
+  - **Disaster type** (e.g., flood, fire, earthquake)
+  - **Human/animal presence**
+  - **Casualties or injuries**
+  - **Environmental conditions** (smoke, fire, water, debris)
+  - **Infrastructure damage**
+  - **Visibility conditions**
+- Provide a concise summary for quick assessment.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce4ad540-dca4-4245-a2ff-c47c858f970f) and start prompting.
+## 🚀 Features
+- 🔍 **Automatic Image Captioning** (HuggingFace vision model)
+- 🤖 **AI-powered Disaster Report Generation**
+- 📊 **Structured Data Extraction** from visual input
+- 🎨 **Responsive Frontend** with modern UI components
+- 🌐 **API-first Architecture** for easy integration
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧰 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Frontend**
+- React 18 + TypeScript
+- Vite
+- TailwindCSS + shadcn/ui
+- Radix UI components
+- React Router DOM
+- TanStack Query
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Backend**
+- FastAPI
+- Uvicorn
+- Pillow
+- Transformers + Torch
+- HuggingFace Hub
+- python-dotenv
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Project Structure
+```
+backend/
+├── app/
+│ ├── init.py
+│ ├── main.py # FastAPI entry point
+│ └── utils.py # Caption & report generation logic
+└── requirements.txt
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+frontend/
+├── public/
+├── src/
+│ ├── components/ # UI components
+│ ├── hooks/ # Custom React hooks
+│ ├── lib/ # Utility functions
+│ ├── pages/ # Page views
+│ ├── App.tsx # App root component
+│ └── main.tsx # React entry point
+└── package.json
 
-# Step 3: Install the necessary dependencies.
-npm i
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Soumya03007/Disaster-Analysis.git
+cd Disaster-Analysis
+```
+### 2️⃣ Backend Setup
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the backend server
+uvicorn app.main:app --reload
+```
+
+### 3️⃣ Frontend Setup
+```bash
+cd ../frontend
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 🙌 Acknowledgments
+- Hugging Face for model hosting and pretrained transformers
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Radix UI + shadcn/ui for modern, accessible UI components
 
-**Use GitHub Codespaces**
+- FastAPI for high-performance backend development
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ce4ad540-dca4-4245-a2ff-c47c858f970f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
