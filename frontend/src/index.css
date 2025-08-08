@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom disaster analysis theme - Dark Scarlet */
+    --analysis-primary: 0 84% 60%;
+    --analysis-secondary: 0 0% 3%;
+    --analysis-accent: 0 84% 60%;
+    --analysis-warning: 0 84% 60%;
+    --analysis-success: 142 76% 36%;
+    --analysis-muted: 0 0% 60%;
+    --analysis-card: 0 0% 7%;
+    --analysis-border: 0 0% 15%;
+    
+    /* Dark Scarlet Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 7%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 7%), hsl(0 0% 10%));
+    
+    /* Dark Theme Shadows with Scarlet Glow */
+    --shadow-analysis: 0 4px 6px -1px hsl(0 84% 60% / 0.3), 0 2px 4px -1px hsl(0 84% 60% / 0.2);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-upload: 0 10px 15px -3px hsl(0 84% 60% / 0.2), 0 4px 6px -2px hsl(0 84% 60% / 0.1);
+    --shadow-glow: 0 0 20px hsl(0 84% 60% / 0.3);
+    
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 84% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 84% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
+
+    /* Dark mode disaster analysis theme */
+    --analysis-primary: 0 84% 60%;
+    --analysis-secondary: 0 0% 3%;
+    --analysis-accent: 0 84% 60%;
+    --analysis-warning: 0 84% 60%;
+    --analysis-success: 142 76% 36%;
+    --analysis-muted: 0 0% 60%;
+    --analysis-card: 0 0% 7%;
+    --analysis-border: 0 0% 15%;
+    
+    /* Enhanced Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 7%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 7%), hsl(0 0% 10%));
+    
+    /* Enhanced Dark shadows */
+    --shadow-analysis: 0 4px 6px -1px hsl(0 84% 60% / 0.3), 0 2px 4px -1px hsl(0 84% 60% / 0.2);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-upload: 0 10px 15px -3px hsl(0 84% 60% / 0.2), 0 4px 6px -2px hsl(0 84% 60% / 0.1);
+    --shadow-glow: 0 0 20px hsl(0 84% 60% / 0.3);
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 84% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 84% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-analysis {
+    box-shadow: var(--shadow-analysis);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-upload {
+    box-shadow: var(--shadow-upload);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .analysis-border {
+    border-color: hsl(var(--analysis-border));
+  }
+  
+  .analysis-card {
+    background-color: hsl(var(--analysis-card));
+  }
+  
+  .text-analysis-muted {
+    color: hsl(var(--analysis-muted));
+  }
+  
+  .scarlet-glow {
+    box-shadow: 0 0 20px hsl(0 84% 60% / 0.4), 0 0 40px hsl(0 84% 60% / 0.2);
+  }
+  
+  .green-glow {
+    box-shadow: 0 0 20px hsl(142 76% 36% / 0.4), 0 0 40px hsl(142 76% 36% / 0.2);
+  }
+  
+  .scarlet-border {
+    border-color: hsl(0 84% 60%);
+  }
+}

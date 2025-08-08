@@ -1,0 +1,20 @@
+{
+  "name": "disaster-scene-view-main",
+  "version": "1.0.0",
+  "description": "**URL**: https://lovable.dev/projects/ce4ad540-dca4-4245-a2ff-c47c858f970f",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "path-browserify": "^1.0.1"
+  },
+  "dependencies": {
+    "lovable-tagger": "^1.1.9"
+  }
+}
